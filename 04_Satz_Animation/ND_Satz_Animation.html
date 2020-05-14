@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>ND Wort Animation</title>
+  </head>
+  <body>
+
+    <div class="raster">
+    <p>Wann</p>
+    <p>ist</p>
+    <p>ein</p>
+    <p>Mann</p>
+    <p>ein</p>
+    <p>Mann</p>
+    </div>
+
+
+  </body>
+</html>
+
+
+
+
+
+
+
+<style media="screen">
+
+html {
+  font-size: 18px;
+  background: black;
+}
+
+.raster {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 100vh ;
+  grid-gap: 23px;
+  align-items: end;
+}
+
+.raster p {
+  font-family: "Helvetica Neue";
+  font-weight: normal;
+  font-size: 0.5em;
+  line-height: 0.5em;
+  text-align: center;
+  color: white;
+  margin-top: 0em;
+  opacity: 0%;
+
+  transition: all 1s ease;
+}
+
+.raster:hover p{
+ color: #ff1bf3;
+ font-size: 3em;
+ margin-bottom: 50vh;
+ opacity: 100%;
+}
+
+.raster:hover :nth-child(1) {
+  color: #00cfff;
+}
+
+.raster:hover :nth-child(2) {
+  color: #00cfff;
+  font-size: 2em;
+  transition-delay: 0.4s;
+}
+
+.raster:hover :nth-child(3) {
+  color: #ff8fff;
+  font-size: 1em;
+  transition-delay: 1s;
+}
+
+.raster:hover :nth-child(4) {
+  font-size: 10em;
+  transition-delay: 1.2s;
+  margin-bottom: 60vh
+}
+
+.raster:hover :nth-child(5) {
+  color: #ff8fff;
+  font-size: 1em;
+  transition-delay: 1.8s;
+}
+
+.raster:hover :nth-child(6) {
+  font-size: 10em;
+  transition-delay: 2s;
+  margin-bottom: 40vh
+}
+
+
+
+
+
+
+
+</style>
