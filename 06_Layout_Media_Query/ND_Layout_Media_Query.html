@@ -3,6 +3,72 @@
   <head>
     <meta charset="utf-8">
     <title>ND Layout Media Query</title>
+    <style media="screen">
+
+      html {
+        font-size: 18px;
+        background: white;
+      }
+
+      .raster {
+        display: grid;
+        /*width:100vw;
+        height:100vh;*/
+
+
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "titel titel"
+        ". untertitel"
+        "grundtext grundtext";
+        grid-gap: 1em;
+      }
+
+      h1 {
+        font-family: "Helvetica Neue";
+        font-weight: black;
+        font-size: 10em;
+        line-height: 1em;
+        text-align: center;
+        color: black;
+        margin-top: 0em;
+      }
+
+
+      h2 {
+        font-family: "Helvetica Neue";
+        font-weight: black;
+        font-size: 5em;
+        line-height: 1em;
+        text-align: left;
+        color: black;
+        margin-top: 0em;
+      }
+
+      p {
+        font-family: "Helvetica Neue";
+        font-weight: normal;
+        font-size: 1em;
+        line-height: 1.5em;
+        text-align: right;
+        color: black;
+        margin-top: 0em;
+      }
+
+      .titel {
+        grid-area: titel;
+      }
+
+      .untertitel {
+        grid-area: untertitel;
+      }
+
+      .grundtext {
+        grid-area: grundtext;
+      }
+
+
+
+    </style>
   </head>
   <body>
 
@@ -46,68 +112,6 @@
 
 
 
-<style media="screen">
 
-html {
-  font-size: 18px;
-  background: white;
-}
-
-.raster {
-  display: grid;
-  grid-template-areas: "titel titel"
-                      ". untertitel"
-                      "grundtext";
-
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 1em;
-}
-
-h1 {
-  font-family: "Helvetica Neue";
-  font-weight: black;
-  font-size: 10em;
-  line-height: 1em;
-  text-align: center;
-  color: black;
-  margin-top: 0em;
-}
-
-
-h2 {
-  font-family: "Helvetica Neue";
-  font-weight: black;
-  font-size: 5em;
-  line-height: 1em;
-  text-align: left;
-  color: black;
-  margin-top: 0em;
-}
-
-p {
-  font-family: "Helvetica Neue";
-  font-weight: normal;
-  font-size: 1em;
-  line-height: 1.5em;
-  text-align: right;
-  color: black;
-  margin-top: 0em;
-}
-
-.titel {
-  grid-area: titel;
-}
-
-.untertitel {
-  grid-area: untertitel;
-}
-
-.grundtext {
-  grid-area: grundtext;
-}
-
-
-
-</style>
 
 </html>
