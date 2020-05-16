@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>ND Layout Media Query</title>
+  </head>
+  <body>
+
+    <div class="raster">
+
+      <div class="titel">
+        <h1>Männer</h1>
+      </div>
+
+      <div class="untertitel">
+        <h2>Wann ist ein Mann ein Mann</h2>
+      </div>
+
+      <div class="grundtext">
+        <p> nehmen in den arm
+          geben geborgenheit
+          weinen heimlich
+          brauchen viel zärtlichkeit
+          sind so verletzlich
+          sind auf dieser welt einfach unersätzlich
+          kaufen frauen
+          stehn ständig unter strom
+          baggern wie blöde
+          lügen am telefon
+          sind allzeit bereit
+          bestechen durch ihr geld und ihre lässigkeit
+        </p>
+
+      </div>
+
+
+
+    </div>
+
+
+  </body>
+
+
+
+
+
+
+
+<style media="screen">
+
+html {
+  font-size: 18px;
+  background: white;
+}
+
+.raster {
+  display: grid;
+  grid-template-areas: "titel titel"
+                      ". untertitel"
+                      "grundtext";
+
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+}
+
+h1 {
+  font-family: "Helvetica Neue";
+  font-weight: black;
+  font-size: 10em;
+  line-height: 1em;
+  text-align: center;
+  color: black;
+  margin-top: 0em;
+}
+
+
+h2 {
+  font-family: "Helvetica Neue";
+  font-weight: black;
+  font-size: 5em;
+  line-height: 1em;
+  text-align: left;
+  color: black;
+  margin-top: 0em;
+}
+
+p {
+  font-family: "Helvetica Neue";
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1.5em;
+  text-align: right;
+  color: black;
+  margin-top: 0em;
+}
+
+.titel {
+  grid-area: titel;
+}
+
+.untertitel {
+  grid-area: untertitel;
+}
+
+.grundtext {
+  grid-area: grundtext;
+}
+
+
+
+</style>
+
+</html>

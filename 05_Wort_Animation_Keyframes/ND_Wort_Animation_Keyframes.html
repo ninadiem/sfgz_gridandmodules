@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>ND Wort Animation Schlüsselrahmen</title>
+  </head>
+  <body>
+
+    <!-- <div class="gender_symbol">
+      <div class="kreis"></div>
+      <div class="strich_lang"></div>
+      <div class="strich_kurz_eins"></div>
+      <div class="strich_kurz_zwei"></div>
+    </div> -->
+
+    <img src="./asset/mann.png" alt="Mann">
+
+
+    <div class="raster">
+      <div class="maenner_animation">M</div>
+      <div class="maenner_animation">Ä</div>
+      <div class="maenner_animation">N</div>
+      <div class="maenner_animation">N</div>
+      <div class="maenner_animation">E</div>
+      <div class="maenner_animation">R</div>
+    </div>
+
+
+
+
+
+  </body>
+</html>
+
+
+
+
+
+
+
+<style media="screen">
+
+html {
+  font-size: 18px;
+  background: black;
+}
+
+.raster {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 100vh;
+  grid-gap: 23px;
+  align-items: center;
+}
+
+.raster div {
+  font-family: "Helvetica Neue";
+  font-weight: bold;
+  font-size: 13em;
+  text-align: center;
+  color: pink;
+  margin-bottom: 0%;
+}
+
+
+
+
+@keyframes drehen {
+    0% {
+        transform: scale(1) rotate(0deg);
+
+    }
+    50% {
+        transform: scale(3) rotate(180deg);
+
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+@keyframes bewegen_bild {
+    0% {
+        transform: translate(0vw, 0vh);
+
+    }
+    50% {
+      transform: translate(50vw, 100vh);
+
+    }
+    100% {
+      transform: translate(100vw, 0vh);
+    }
+}
+
+
+/* @keyframes bewegen_strich_lang {
+    0% {
+        transform: translate(100vw, 0vh);
+
+    }
+    50% {
+      transform: translate(100vw, 50vh);
+
+    }
+    100% {
+      transform: translate(50vw, 100vh);
+    }
+} */
+
+
+.maenner_animation{
+  animation-name: drehen;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  }
+
+.maenner_animation:hover{
+  animation-play-state: paused;
+  color: #00cfff;
+  transition-duration: 1s;
+  text-shadow: 0 0 10px #00cfff, 0 0 10px #00cfff;
+}
+
+img {
+  width: 20%;
+  height: 20%;
+
+  animation-name: bewegen_bild;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+
+}
+/* .kreis {
+  width: 5em;
+  height: 5em;
+  border: 1em solid white;
+  border-radius: 50%;
+
+  animation-name: bewegen_kreis;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+.strich_lang {
+  width: 4em;
+  height: 1em;
+  background-color: white;
+
+  animation-name: bewegen_strich_lang;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+.strich_kurz_eins {
+  width: 3em;
+  height: 1em;
+  background-color: white;
+} */
+
+.strich_kurz_zwei {
+  width: 3em;
+  height: 1em;
+  background-color: white;
+}
+
+
+
+
+
+
+</style>
