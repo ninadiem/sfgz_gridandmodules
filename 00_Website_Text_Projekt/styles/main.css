@@ -1,0 +1,47 @@
+html {
+  font-size: 15px;
+}
+
+
+
+h1 {
+  font-family: "Titling Gothic FB Extd Bd";
+  font-display: swap;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10em;
+}
+
+p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-style: italic;
+  font-size: 5em;
+}
+
+.p2 {
+  font-family: 'Source Sans Pro', sans-serif;
+
+  font-family: 'Work Sans', sans-serif;  font-style: italic;
+  font-size: 5em;
+}
+
+/* .titlinggothicfbextendedmedium {
+    font-family: "Titling Gothic FB Extd Med";
+    font-display: swap;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.titlinggothicfbextendedbold {
+    font-family: "Titling Gothic FB Extd Bd";
+    font-display: swap;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.titlinggothicfbextendedblack {
+    font-family: "Titling Gothic FB Extd Bla";
+    font-display: swap;
+    font-style: normal;
+    font-weight: normal;
+} */
