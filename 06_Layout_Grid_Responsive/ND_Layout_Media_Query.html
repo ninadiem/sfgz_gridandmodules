@@ -13,7 +13,7 @@
       </div>
 
       <div class="untertitel">
-        <h2>Wann ist ein Mann ein Mann</h2>
+        <h2>Wann ist <br> ein Mann <br> ein Mann</h2>
       </div>
 
       <div class="grundtext">
@@ -57,8 +57,8 @@ html {
                       ". untertitel"
                       "grundtext .";
 
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr min-content 1fr;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto auto;
   grid-gap: 1em;
 }
 
@@ -67,9 +67,9 @@ h1 {
   font-weight: black;
   font-size: 12em;
   line-height: 1em;
-  text-align: center;
   color: black;
-  margin-top: 0em;
+  margin: 0em;
+  padding: 0em;
 }
 
 
@@ -80,7 +80,9 @@ h2 {
   line-height: 1em;
   text-align: left;
   color: black;
-  margin-top: 0em;
+  display: inline;
+  padding: 0em;
+  margin: 0em;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
 }
@@ -107,6 +109,43 @@ p {
   grid-area: grundtext;
 }
 
+
+@media all and (max-width: 40em) {
+  .raster {
+    grid-template-areas: "titel titel"
+                        ". untertitel"
+                        "grundtext .";
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-gap: 1em;
+}
+
+  h1 {
+    font-family: "Helvetica Neue";
+    font-weight: black;
+    font-size: 6em;
+    line-height: 1em;
+    margin: 0em;
+    padding: 0em;
+}
+
+  h2 {
+    font-size: 3em;
+    line-height: 1em;
+    text-align: left;
+    display: inline;
+    writing-mode: horizontal-tb;
+}
+
+p {
+  font-family: "Helvetica Neue";
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1.5em;
+  text-align: left;
+  margin-top: 0em;
+}
 
 
 </style>
