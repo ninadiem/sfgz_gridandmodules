@@ -17,7 +17,7 @@ html {
   width: 85%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 7vmin;
+  margin-top: 5vmin;
 }
 
 .bereich_vier {
@@ -30,7 +30,7 @@ html {
 .raster_bereich_eins {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(6, 8.8rem);
+  grid-template-rows: repeat(6, auto);
   grid-template-areas:
     "reihe_eins reihe_eins"
     "reihe_zwei reihe_zwei"
@@ -50,7 +50,7 @@ html {
 .raster_bereich_drei {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(2, 8.8rem);
+  grid-template-rows: repeat(2, auto);
   grid-template-areas:
     "reihe_eins reihe_eins"
     "reihe_zwei reihe_zwei";
@@ -59,6 +59,7 @@ html {
 .raster_bereich_vier {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+  /* grid-template-rows: auto auto; */
   grid-template-rows: repeat(2, max-content);
   grid-template-areas:
     "aussen hart und . . ."
@@ -98,7 +99,7 @@ html {
 }
 
 .isinview .zwei_song_zeile{
-  animation-name: bewegen_sz;
+  animation-name: bewegen_sz_zwei;
   animation-duration: 1s;
   animation-delay: 2s;
   animation-iteration-count: 1;
@@ -117,7 +118,7 @@ html {
 }
 
 .isinview .drei_song_zeile {
-  animation-name: bewegen_sz;
+  animation-name: bewegen_sz_drei;
   animation-duration: 1s;
   animation-delay: 3s;
   animation-iteration-count: 1;
@@ -132,7 +133,7 @@ html {
 }
 
 .isinview .vier_song_zeile {
-  animation-name: bewegen_sz;
+  animation-name: bewegen_sz_vier;
   animation-duration: 1s;
   animation-delay: 4s;
   animation-iteration-count: 1;
@@ -151,7 +152,7 @@ html {
 }
 
 .isinview .fuenf_song_zeile {
-  animation-name: bewegen_sz;
+  animation-name: bewegen_sz_fuenf;
   animation-duration: 1s;
   animation-delay: 5s;
   animation-iteration-count: 1;
@@ -164,9 +165,8 @@ html {
 .sechs_song_zeile {
   grid-area: reihe_sechs;
 }
-
 .isinview .sechs_song_zeile {
-  animation-name: bewegen_sz;
+  animation-name: bewegen_sz_sechs;
   animation-duration: 1s;
   animation-delay: 6s;
   animation-iteration-count: 1;
@@ -189,12 +189,10 @@ html {
   /* font-size: 16vw; */
   /* font-size: calc(1rem + 15vw); */
   font-size: 13.5rem;
-  line-height: 0.7em;
   text-transform: uppercase;
-  margin-bottom: 0.06em;
+  margin-bottom: -0.15em;
   padding: 0;
 }
-
 
 .strophe_titel_klein {
   font-family: 'Source Sans Pro', sans-serif;
@@ -214,7 +212,6 @@ html {
   font-weight: 300;
   /* font-size: calc(1rem + 3vw); */
   font-size: 4rem;
-  line-height: 1em;
   margin: 0;
   padding: 0;
 }
@@ -256,10 +253,15 @@ html {
   font-weight: normal;
   text-align: center;
   font-size: 15rem;
-  line-height: 0.84em;
   text-transform: uppercase;
   color: white;
-  margin-bottom: -0.068em;
+  margin-top: -0.154em;
+  margin-bottom: -0.214em;
+}
+
+.werden_als .strophe_titel, .schon_als .strophe_titel, .geeicht .strophe_titel {
+  margin-top: -0.23em;
+  margin-bottom: -0.265em;
 }
 
 .schon_als .strophe_titel {
@@ -272,7 +274,7 @@ html {
 }
 
 .isinview .sieben_song_zeile{
-  animation-name: bewegen_sz;
+  animation-name: bewegen_sz_zwei;
   animation-duration: 1s;
   animation-iteration-count: 1;
   animation-delay: 1s;
@@ -288,7 +290,7 @@ html {
 }
 
 .isinview .acht_song_zeile {
-  animation-name: bewegen_sz;
+  animation-name: bewegen_sz_drei;
   animation-duration: 1s;
   animation-delay: 2s;
   animation-iteration-count: 1;
@@ -326,7 +328,6 @@ html {
   align-self: flex-end;
   animation-name: aussen_runter;
   animation-duration: 0.7s;
-  animation-delay: 1s;
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-timing-function: linear;
@@ -342,7 +343,7 @@ html {
   align-self: flex-end;
   animation-name: aussen_runter;
   animation-duration: 0.7s;
-  animation-delay: 1.7s;
+  animation-delay: 0.7s;
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-timing-function: linear;
@@ -358,7 +359,7 @@ html {
   align-self: flex-end;
   animation-name: aussen_runter;
   animation-duration: 0.7s;
-  animation-delay: 2.4s;
+  animation-delay: 1.4s;
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-timing-function: linear;
@@ -373,7 +374,7 @@ html {
 .isinview .innen {
   animation-name: innen_hoch;
   animation-duration: 0.7s;
-  animation-delay: 3.1s;
+  animation-delay: 2.1s;
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-timing-function: linear;
@@ -388,7 +389,7 @@ html {
 .isinview .ganz {
   animation-name: innen_hoch;
   animation-duration: 0.7s;
-  animation-delay: 3.8s;
+  animation-delay: 2.8s;
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-timing-function: linear;
@@ -403,7 +404,7 @@ html {
 .isinview .weich {
   animation-name: innen_hoch;
   animation-duration: 0.7s;
-  animation-delay: 4.5s;
+  animation-delay: 3.5s;
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-timing-function: linear;
@@ -412,10 +413,6 @@ html {
 }
 
 /* Bereich 5 */
-
-.werden_als .strophe_titel, .schon_als .strophe_titel, .geeicht .strophe_titel {
-  margin-bottom: -0.043em;
-}
 .werden_als {
   grid-area: werden;
 }
@@ -423,46 +420,24 @@ html {
 .k {
   grid-area: kind_eins;
   opacity: 0%;
-  transition: all 1s ease;
-}
-
-.k:hover {
-  opacity: 100%;
 }
 
 .i {
   grid-area: kind_zwei;
   opacity: 0%;
-  transition: all 1s ease;
-}
-
-.i:hover {
-  opacity: 100%;
 }
 
 .n_kind {
   grid-area: kind_drei;
   opacity: 0%;
-  transition: all 1s ease;
-}
-
-.n_kind:hover {
-  opacity: 100%;
 }
 
 .d {
   grid-area: kind_vier;
   opacity: 0%;
-  transition: all 1s ease;
 }
 
-.d:hover {
-  opacity: 100%;
-}
-
-
-
-/* .isinview .k, .isinview .i, .isinview .n_kind, .isinview .d {
+.isinview .k, .isinview .i, .isinview .n_kind, .isinview .d {
   animation-name: erscheinen_scale;
   animation-duration: 1.3s;
   animation-delay: 1s;
@@ -470,7 +445,7 @@ html {
   animation-direction: normal;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
-} */
+}
 
 .schon_als {
   grid-area: schon;
@@ -479,39 +454,21 @@ html {
 .m {
   grid-area: mann_eins;
   opacity: 0%;
-  transition: all 1s ease;
-}
-
-.m:hover {
-  opacity: 100%;
 }
 .a {
   grid-area: mann_zwei;
   opacity: 0%;
-  transition: all 1s ease;
-}
-
-.a:hover {
-  opacity: 100%;
 }
 .n_mann_eins {
   grid-area: mann_drei;
   opacity: 0%;
-  transition: all 1s ease;
-}
-
-.n_mann_eins:hover {
-  opacity: 100%;
 }
 .n_mann_zwei {
   grid-area: mann_vier;
   opacity: 0%;
-  transition: all 1s ease;
-}.n_mann_zwei:hover {
-  opacity: 100%;
 }
 
-/* .isinview .m, .isinview .a, .isinview .n_mann_eins, .isinview .n_mann_zwei {
+.isinview .m, .isinview .a, .isinview .n_mann_eins, .isinview .n_mann_zwei {
   animation-name: erscheinen_scale;
   animation-duration: 1.3s;
   animation-delay: 2.3s;
@@ -519,7 +476,7 @@ html {
   animation-direction: normal;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
-} */
+}
 
 .geeicht {
   grid-area: geeicht;
@@ -594,10 +551,6 @@ html {
   height: 15vw;
 }
 
-.mittlerer_abstand {
-  height: 45vw;
-}
-
 .grosser_abstand {
   height: 100vw;
 }
@@ -606,23 +559,90 @@ html {
 
 /* ANIMATIONEN */
 /* Animation SONGZEILEN */
-@keyframes bewegen_sz {
+@keyframes bewegen_sz_zwei {
   0% {
-    transform: translate(0%, 100%);
+    transform: translate(0%, 0%);
     opacity: 0%;
   }
 
   50% {
-    transform: translate(0%, 50%);
+    transform: translate(0%, -25.5%);
     opacity: 50%;
   }
 
   100% {
-    transform: translate(0%, 0%);
+    transform: translate(0%, -51%);
     opacity: 100%;
   }
 }
 
+@keyframes bewegen_sz_drei {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 0%;
+  }
+
+  50% {
+    transform: translate(0%, -51.5%);
+    opacity: 50%;
+  }
+
+  100% {
+    transform: translate(0%, -103%);
+    opacity: 100%;
+  }
+}
+
+@keyframes bewegen_sz_vier {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 0%;
+  }
+
+  50% {
+    transform: translate(0%, -77%);
+    opacity: 50%;
+  }
+
+  100% {
+    transform: translate(0%, -154%);
+    opacity: 100%;
+  }
+}
+
+@keyframes bewegen_sz_fuenf {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 0%;
+  }
+
+  50% {
+    transform: translate(0%, -102.5%);
+    opacity: 50%;
+  }
+
+  100% {
+    transform: translate(0%, -205%);
+    opacity: 100%;
+  }
+}
+
+@keyframes bewegen_sz_sechs {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 0%;
+  }
+
+  50% {
+    transform: translate(0%, -102.5%);
+    opacity: 50%;
+  }
+
+  100% {
+    transform: translate(0%, -205%);
+    opacity: 100%;
+  }
+}
 
 /* Animation M Ä N N E R */
 @keyframes maenner_vergroessern {
