@@ -61,7 +61,6 @@ html {
   grid-template-columns: repeat(6, 1fr);
   /* grid-template-rows: auto auto; */
   grid-template-rows: repeat(2, max-content);
-  grid-gap: 0em;
   grid-template-areas:
     "aussen hart und . . ."
     ". . . innen ganz weich";
@@ -97,7 +96,7 @@ html {
 
 .zwei_song_zeile {
   grid-area: reihe_zwei;
-  animation-name: songzeilen_bewegen_erster_satz;
+  animation-name: bewegen_sz_zwei;
   animation-duration: 1s;
   animation-iteration-count: 1;
   animation-direction: normal;
@@ -112,7 +111,7 @@ html {
 
 .drei_song_zeile {
   grid-area: reihe_drei;
-  animation-name: songzeilen_bewegen_weitere_saetze;
+  animation-name: bewegen_sz_drei;
   animation-duration: 1s;
   animation-delay: 1s;
   animation-iteration-count: 1;
@@ -124,7 +123,7 @@ html {
 
 .vier_song_zeile {
   grid-area: reihe_vier;
-  animation-name: songzeilen_bewegen_weitere_saetze_plus;
+  animation-name: bewegen_sz_vier;
   animation-duration: 1s;
   animation-delay: 2s;
   animation-iteration-count: 1;
@@ -140,7 +139,7 @@ html {
 
 .fuenf_song_zeile {
   grid-area: reihe_fuenf;
-  animation-name: songzeilen_bewegen_weitere_saetze_plus;
+  animation-name: bewegen_sz_fuenf;
   animation-duration: 1s;
   animation-delay: 3s;
   animation-iteration-count: 1;
@@ -152,7 +151,7 @@ html {
 
 .sechs_song_zeile {
   grid-area: reihe_sechs;
-  animation-name: songzeilen_bewegen_weitere_saetze;
+  animation-name: bewegen_sz_sechs;
   animation-duration: 1s;
   animation-delay: 4s;
   animation-iteration-count: 1;
@@ -254,23 +253,26 @@ html {
 /* Bereich 3 */
 .sieben_song_zeile {
   grid-area: reihe_eins;
-  animation-name: songzeilen_bewegen_erster_satz;
+  animation-name: bewegen_sz_zwei;
   animation-duration: 1s;
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
+  opacity: 0%;
 }
+
 
 .acht_song_zeile {
   grid-area: reihe_zwei;
-  animation-name: songzeilen_bewegen_weitere_saetze;
+  animation-name: bewegen_sz_drei;
   animation-duration: 1s;
   animation-delay: 1s;
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
+  opacity: 0%;
 }
 
 .acht_song_zeile div {
@@ -287,6 +289,7 @@ html {
   font-style: italic;
   font-weight: 400;
   font-size: 10vw;
+  line-height: 0%;
   text-transform: uppercase;
   color: white;
   writing-mode: vertical-rl;
@@ -394,7 +397,7 @@ html {
 
 .k, .i, .n_kind, .d {
   animation-name: erscheinen_scale;
-  animation-duration: 1s;
+  animation-duration: 1.3s;
   animation-delay: 0s;
   animation-iteration-count: 1;
   animation-direction: normal;
@@ -425,8 +428,8 @@ html {
 
 .m, .a, .n_mann_eins, .n_mann_zwei {
   animation-name: erscheinen_scale;
-  animation-duration: 1s;
-  animation-delay: 1s;
+  animation-duration: 1.3s;
+  animation-delay: 1.3s;
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-timing-function: linear;
@@ -494,22 +497,26 @@ html {
 
 
 /* SONSTIGES */
-.grosser_abstand {
+.abstand {
   height: 15vw;
+}
+
+.grosser_abstand {
+  height: 100vw;
 }
 
 
 
 /* ANIMATIONEN */
 /* Animation SONGZEILEN */
-@keyframes songzeilen_bewegen_erster_satz {
+@keyframes bewegen_sz_zwei {
   0% {
     transform: translate(0%, 0%);
     opacity: 0%;
   }
 
   50% {
-    transform: translate(0%, -25%);
+    transform: translate(0%, -25.5%);
     opacity: 50%;
   }
 
@@ -519,14 +526,14 @@ html {
   }
 }
 
-@keyframes songzeilen_bewegen_weitere_saetze {
+@keyframes bewegen_sz_drei {
   0% {
     transform: translate(0%, 0%);
     opacity: 0%;
   }
 
   50% {
-    transform: translate(0%, -50%);
+    transform: translate(0%, -51.5%);
     opacity: 50%;
   }
 
@@ -536,7 +543,7 @@ html {
   }
 }
 
-@keyframes songzeilen_bewegen_weitere_saetze_plus {
+@keyframes bewegen_sz_vier {
   0% {
     transform: translate(0%, 0%);
     opacity: 0%;
@@ -549,6 +556,40 @@ html {
 
   100% {
     transform: translate(0%, -154%);
+    opacity: 100%;
+  }
+}
+
+@keyframes bewegen_sz_fuenf {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 0%;
+  }
+
+  50% {
+    transform: translate(0%, -102.5%);
+    opacity: 50%;
+  }
+
+  100% {
+    transform: translate(0%, -205%);
+    opacity: 100%;
+  }
+}
+
+@keyframes bewegen_sz_sechs {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 0%;
+  }
+
+  50% {
+    transform: translate(0%, -102.5%);
+    opacity: 50%;
+  }
+
+  100% {
+    transform: translate(0%, -203%);
     opacity: 100%;
   }
 }
@@ -579,8 +620,8 @@ html {
   }
 
   50% {
-    transform: translate(0%, -75%);
-    opacity: 50%;
+    transform: translate(0%, -50%);
+    opacity: 0%;
   }
 
   100% {
@@ -597,8 +638,8 @@ html {
   }
 
   50% {
-    transform: translate(0%, 75%);
-    opacity: 50%;
+    transform: translate(0%, 50%);
+    opacity: 0%;
   }
 
   100% {
@@ -615,12 +656,17 @@ html {
   }
 
   50% {
-    opacity: 50%;
-    transform: scale(50%);
+    opacity: 100%;
+    transform: scale(100%);
+  }
+
+  80% {
+    opacity: 100%;
+    transform: scale(100%);
   }
 
   100% {
-    opacity: 100%;
+    opacity: 0%;
     transform: scale(100%);
   }
 }
