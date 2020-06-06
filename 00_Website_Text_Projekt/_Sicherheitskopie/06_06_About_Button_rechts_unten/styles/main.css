@@ -14,7 +14,7 @@ html {
   background-color: black;
 }
 
-.bereich_eins, .bereich_drei, .bereich_sechs, {
+.bereich_eins, .bereich_drei, .bereich_sechs {
   width: 85%;
   margin-left: auto;
   margin-right: auto;
@@ -183,6 +183,28 @@ html {
 
 /* ABSATZFORMATE */
 /* Bereich 1 */
+
+.about {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 0;
+  position: fixed;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  margin-top: 80vh;
+  margin-left: 96vw;
+  margin-right: 20px;
+  color: #ea899a;
+  z-index: 100;
+  transition: all 0.5s ease;
+}
+
+.about:hover {
+  color: #ffbccb;
+}
 
 .strophe_titel {
   font-family: 'Source Sans Pro', sans-serif;
@@ -587,34 +609,6 @@ html {
   animation-direction: normal;
   animation-timing-function: linear;
   animation-fill-mode: forwards;}
-
-
-/* Bereich 7 */
-
-.bereich_sieben {
-  display: flex;
-  justify-content: flex-end;
-}
-
-a {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 6rem;
-  text-transform: uppercase;
-  padding: 0;
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  margin-bottom: 3vw;
-  color: #ea899a;
-  transition: all 0.5s ease;
-  text-decoration: none;
-
-}
-
-a:hover {
-  color: #ffbccb;
-}
 
 
 
