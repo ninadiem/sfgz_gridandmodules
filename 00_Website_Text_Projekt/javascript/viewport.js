@@ -16,7 +16,7 @@ const inviewclass = "isinview"; //Klasse die gesetzt wird, falls Element im view
 const IsInView = el => {
     const boundsTop = el.getBoundingClientRect().top
 
-    const offset = 0;
+    let offset = 0;
     if(el.getAttribute('data-attr-offset')!==null){
         offset = el.getAttribute('data-attr-offset')
     }
