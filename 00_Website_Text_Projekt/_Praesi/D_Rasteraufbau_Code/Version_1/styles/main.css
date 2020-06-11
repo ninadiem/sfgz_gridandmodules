@@ -1,0 +1,315 @@
+html {
+  font-size: 16px;
+  width: 100vw;
+}
+
+.content {
+  overflow: hidden;
+  max-width: 100vw;
+}
+
+.bereich_eins {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5vmin;
+}
+
+.raster_bereich_eins {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(6, auto);
+  grid-template-areas:
+    "reihe_eins reihe_eins"
+    "reihe_zwei reihe_zwei"
+    "reihe_drei reihe_drei"
+    "reihe_vier reihe_vier"
+    "reihe_fuenf reihe_fuenf"
+    "reihe_sechs reihe_sechs";
+}
+/* SONGZEILEN GRUPPEN*/
+.eins_song_zeile {
+  grid-area: reihe_eins;
+}
+
+.zwei_song_zeile {
+  grid-area: reihe_zwei;
+}
+
+.isinview .zwei_song_zeile{
+  animation-name: bewegen_sz_zwei;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  opacity: 0%;
+}
+
+.zwei_song_zeile div {
+  text-align: right;
+}
+
+.drei_song_zeile {
+  grid-area: reihe_drei;
+}
+
+.isinview .drei_song_zeile {
+  animation-name: bewegen_sz_drei;
+  animation-duration: 1s;
+  animation-delay: 3s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  opacity: 0%;
+}
+
+.vier_song_zeile {
+  grid-area: reihe_vier;
+}
+
+.isinview .vier_song_zeile {
+  animation-name: bewegen_sz_vier;
+  animation-duration: 1s;
+  animation-delay: 4s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  opacity: 0%;
+}
+
+.vier_song_zeile div {
+  text-align: right;
+}
+
+.fuenf_song_zeile {
+  grid-area: reihe_fuenf;
+}
+
+.isinview .fuenf_song_zeile {
+  animation-name: bewegen_sz_fuenf;
+  animation-duration: 1s;
+  animation-delay: 5s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  opacity: 0%;
+}
+
+.sechs_song_zeile {
+  grid-area: reihe_sechs;
+}
+.isinview .sechs_song_zeile {
+  animation-name: bewegen_sz_sechs;
+  animation-duration: 1s;
+  animation-delay: 6s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  opacity: 0%;
+}
+
+.sechs_song_zeile div {
+  text-align: right;
+}
+
+/* ABSATZFORMATE */
+/* Bereich 1 */
+.strophe_titel {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 13.5rem;
+  text-transform: uppercase;
+  margin-bottom: -0.15em;
+  padding: 0;
+}
+
+.strophe_titel_klein {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 8rem;
+  text-transform: uppercase;
+  margin-bottom: -0.15em;
+  padding: 0;
+}
+
+.strophe_grundtext {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* ANIMATIONEN */
+/* Animation SONGZEILEN */
+@keyframes bewegen_sz_zwei {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 0%;
+  }
+
+  50% {
+    transform: translate(0%, -25.5%);
+    opacity: 50%;
+  }
+
+  100% {
+    transform: translate(0%, -51%);
+    opacity: 100%;
+  }
+}
+
+@keyframes bewegen_sz_drei {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 0%;
+  }
+
+  50% {
+    transform: translate(0%, -51.5%);
+    opacity: 50%;
+  }
+
+  100% {
+    transform: translate(0%, -103%);
+    opacity: 100%;
+  }
+}
+
+@keyframes bewegen_sz_vier {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 0%;
+  }
+
+  50% {
+    transform: translate(0%, -77%);
+    opacity: 50%;
+  }
+
+  100% {
+    transform: translate(0%, -154%);
+    opacity: 100%;
+  }
+}
+
+@keyframes bewegen_sz_fuenf {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 0%;
+  }
+
+  50% {
+    transform: translate(0%, -102.5%);
+    opacity: 50%;
+  }
+
+  100% {
+    transform: translate(0%, -205%);
+    opacity: 100%;
+  }
+}
+
+@keyframes bewegen_sz_sechs {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 0%;
+  }
+
+  50% {
+    transform: translate(0%, -102.5%);
+    opacity: 50%;
+  }
+
+  100% {
+    transform: translate(0%, -205%);
+    opacity: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SONSTIGES */
+.abstand {
+  height: 15vw;
+}
+
+.grosser_abstand {
+  height: 100vw;
+}
+
+
+
+
+
+
+
+
+
+
+/* MEDIAQUERIES */
+/* BP Desktop 1024px */
+@media all and (max-width: 64em) {
+  html {
+    font-size: 12px;
+  }
+
+  /* BP 850px Mobile 640px */
+  @media all and (max-width: 53em) {
+    html {
+      font-size: 5.5px;
+    }
+
+    .raster_bereich_vier {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, max-content);
+      grid-row-gap: 2em;
+      grid-template-areas:
+        "aussen hart und"
+        "innen ganz weich";
+    }
+
+
+    .raster_bereich_fuenf {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(7, auto);
+      grid-row-gap: 1em;
+      grid-template-areas:
+        "werden werden"
+        "kind_eins kind_zwei"
+        "kind_drei kind_vier"
+        "schon schon"
+        "mann_eins mann_zwei"
+        "mann_drei mann_vier"
+        "geeicht geeicht";
+    }
+
+    /*
+.und {
+  justify-items: center;
+} */
+  }
