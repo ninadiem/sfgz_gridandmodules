@@ -18,14 +18,17 @@ const IsInView = el => {
 
     let offset = 0;
     if(el.getAttribute('data-attr-offset')!==null){
-        offset = el.getAttribute('data-attr-offset')
+        offset = parseInt(el.getAttribute('data-attr-offset'))
     }
 
 
     const viewport = {
         top: 0 - offset,
-        bottom: window.innerHeight,
+        bottom: window.innerHeight - offset,
     }
+
+    console.log(viewport.top)
+    console.log(viewport.top)
 
     const bounds = {
         top: boundsTop,
