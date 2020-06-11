@@ -16,8 +16,14 @@ let inviewclass = "isinview"; //Klasse die gesetzt wird, falls Element im viewpo
 const IsInView = el => {
     const boundsTop = el.getBoundingClientRect().top
 
+    const offset = 0;
+    if(el.getAttribute('data-attr-offset')!==null){
+        offset = el.getAttribute('data-attr-offset')
+    }
+
+
     const viewport = {
-        top: 0,
+        top: 0 - offset,
         bottom: window.innerHeight,
     }
 
@@ -41,6 +47,8 @@ document.addEventListener( 'DOMContentLoaded', () => {
     const handler = () => raf( () => {
         for (let i = 0; i < elements.length; i++)
             {
+
+
                 if (IsInView(elements[i])) {
                     elements[i].classList.add(inviewclass)
                 }else{
