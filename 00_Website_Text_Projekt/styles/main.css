@@ -574,8 +574,8 @@ iframe {
 
 img.jump-top {
   /*jump to top button*/
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
 }
 
 
@@ -821,4 +821,7 @@ img.jump-top {
   p {
     font-size: 9px;
   }
+
+  .auszeichnung_fett {
+    font-size: 13rem;
 }
