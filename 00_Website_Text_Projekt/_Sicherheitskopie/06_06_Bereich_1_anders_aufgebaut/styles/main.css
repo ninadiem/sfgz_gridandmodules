@@ -1,40 +1,23 @@
 html {
   font-size: 16px;
   width: 100vw;
-  cursor: default;
 }
-
-.progress-container {
-  width: 100%;
-  height: 2.5px;
-  background: none;
-  position: fixed;
-  z-index: 100;
-}
-
-.progress-bar {
-  height: 2.5px;
-  background: #ea899a;
-  width: 0%;
-  z-index: 101;
-}
-
 
 /* RASTER, GROSSE BEREICHE */
+
 .content {
   overflow: hidden;
   max-width: 100vw;
 }
-
 .schwarzer_block {
   background-color: black;
 }
 
-.bereich_eins, .bereich_drei, .bereich_sechs, .bereich_sieben {
+.bereich_eins, .bereich_drei, .bereich_sechs {
   width: 85%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10vmin;
+  margin-top: 5vmin;
 }
 
 .bereich_vier {
@@ -47,7 +30,7 @@ html {
 .raster_bereich_eins {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(6, 8.8rem);
+  grid-template-rows: repeat(6, auto);
   grid-template-areas:
     "reihe_eins reihe_eins"
     "reihe_zwei reihe_zwei"
@@ -67,7 +50,7 @@ html {
 .raster_bereich_drei {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(2, 8.8rem);
+  grid-template-rows: repeat(2, auto);
   grid-template-areas:
     "reihe_eins reihe_eins"
     "reihe_zwei reihe_zwei";
@@ -76,6 +59,7 @@ html {
 .raster_bereich_vier {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+  /* grid-template-rows: auto auto; */
   grid-template-rows: repeat(2, max-content);
   grid-template-areas:
     "aussen hart und . . ."
@@ -85,17 +69,17 @@ html {
 
 .raster_bereich_fuenf {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, auto);
   grid-template-areas:
-    "werden"
-    "kind"
-    "schon"
-    "mann"
-    "geeicht";
+    "werden werden werden werden"
+    "kind_eins kind_zwei kind_drei kind_vier"
+    "schon schon schon schon"
+    "mann_eins mann_zwei mann_drei mann_vier"
+    "geeicht geeicht geeicht geeicht";
 }
 
-.raster_bereich_sechs {
+.raster_eins_bereich_sechs, .raster_zwei_bereich_sechs,  {
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: repeat(3, auto);
@@ -104,7 +88,6 @@ html {
     "ein_mann_eins ."
     "ein_mann_zwei .";
 }
-
 
 /* SONGZEILEN GRUPPEN*/
 .eins_song_zeile {
@@ -115,8 +98,8 @@ html {
   grid-area: reihe_zwei;
 }
 
-.isinview .zwei_song_zeile {
-  animation-name: bewegen_sz;
+.isinview .zwei_song_zeile{
+  animation-name: bewegen_sz_zwei;
   animation-duration: 1s;
   animation-delay: 2s;
   animation-iteration-count: 1;
@@ -135,7 +118,7 @@ html {
 }
 
 .isinview .drei_song_zeile {
-  animation-name: bewegen_sz;
+  animation-name: bewegen_sz_drei;
   animation-duration: 1s;
   animation-delay: 3s;
   animation-iteration-count: 1;
@@ -150,7 +133,7 @@ html {
 }
 
 .isinview .vier_song_zeile {
-  animation-name: bewegen_sz;
+  animation-name: bewegen_sz_vier;
   animation-duration: 1s;
   animation-delay: 4s;
   animation-iteration-count: 1;
@@ -169,7 +152,7 @@ html {
 }
 
 .isinview .fuenf_song_zeile {
-  animation-name: bewegen_sz;
+  animation-name: bewegen_sz_fuenf;
   animation-duration: 1s;
   animation-delay: 5s;
   animation-iteration-count: 1;
@@ -182,9 +165,8 @@ html {
 .sechs_song_zeile {
   grid-area: reihe_sechs;
 }
-
 .isinview .sechs_song_zeile {
-  animation-name: bewegen_sz;
+  animation-name: bewegen_sz_sechs;
   animation-duration: 1s;
   animation-delay: 6s;
   animation-iteration-count: 1;
@@ -207,9 +189,8 @@ html {
   /* font-size: 16vw; */
   /* font-size: calc(1rem + 15vw); */
   font-size: 13.5rem;
-  line-height: 0.7em;
   text-transform: uppercase;
-  margin-bottom: 0.06em;
+  margin-bottom: -0.15em;
   padding: 0;
 }
 
@@ -231,7 +212,6 @@ html {
   font-weight: 300;
   /* font-size: calc(1rem + 3vw); */
   font-size: 4rem;
-  line-height: 1em;
   margin: 0;
   padding: 0;
 }
@@ -266,16 +246,22 @@ html {
   margin-right: -0.1em;
 }
 
+
 .auszeichnung_fett {
   font-family: "Titling Gothic FB Extd Bd";
   font-style: normal;
   font-weight: normal;
   text-align: center;
   font-size: 15rem;
-  line-height: 0.84em;
   text-transform: uppercase;
   color: white;
-  margin-bottom: -0.068em;
+  margin-top: -0.154em;
+  margin-bottom: -0.214em;
+}
+
+.werden_als .strophe_titel, .schon_als .strophe_titel, .geeicht .strophe_titel {
+  margin-top: -0.23em;
+  margin-bottom: -0.265em;
 }
 
 .schon_als .strophe_titel {
@@ -287,8 +273,8 @@ html {
   grid-area: reihe_eins;
 }
 
-.isinview .sieben_song_zeile {
-  animation-name: bewegen_sz;
+.isinview .sieben_song_zeile{
+  animation-name: bewegen_sz_zwei;
   animation-duration: 1s;
   animation-iteration-count: 1;
   animation-delay: 1s;
@@ -298,12 +284,13 @@ html {
   opacity: 0%;
 }
 
+
 .acht_song_zeile {
   grid-area: reihe_zwei;
 }
 
 .isinview .acht_song_zeile {
-  animation-name: bewegen_sz;
+  animation-name: bewegen_sz_drei;
   animation-duration: 1s;
   animation-delay: 2s;
   animation-iteration-count: 1;
@@ -337,12 +324,10 @@ html {
 .aussen {
   grid-area: aussen;
 }
-
 .isinview .aussen {
   align-self: flex-end;
   animation-name: aussen_runter;
   animation-duration: 0.7s;
-  animation-delay: 1s;
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-timing-function: linear;
@@ -358,7 +343,7 @@ html {
   align-self: flex-end;
   animation-name: aussen_runter;
   animation-duration: 0.7s;
-  animation-delay: 1.7s;
+  animation-delay: 0.7s;
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-timing-function: linear;
@@ -368,13 +353,13 @@ html {
 
 .und {
   grid-area: und;
-}
 
+}
 .isinview .und {
   align-self: flex-end;
   animation-name: aussen_runter;
   animation-duration: 0.7s;
-  animation-delay: 2.4s;
+  animation-delay: 1.4s;
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-timing-function: linear;
@@ -384,12 +369,12 @@ html {
 
 .innen {
   grid-area: innen;
-}
 
+}
 .isinview .innen {
   animation-name: innen_hoch;
   animation-duration: 0.7s;
-  animation-delay: 3.1s;
+  animation-delay: 2.1s;
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-timing-function: linear;
@@ -399,12 +384,12 @@ html {
 
 .ganz {
   grid-area: ganz;
-}
 
+}
 .isinview .ganz {
   animation-name: innen_hoch;
   animation-duration: 0.7s;
-  animation-delay: 3.8s;
+  animation-delay: 2.8s;
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-timing-function: linear;
@@ -414,12 +399,12 @@ html {
 
 .weich {
   grid-area: weich;
-}
 
+}
 .isinview .weich {
   animation-name: innen_hoch;
   animation-duration: 0.7s;
-  animation-delay: 4.5s;
+  animation-delay: 3.5s;
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-timing-function: linear;
@@ -428,43 +413,78 @@ html {
 }
 
 /* Bereich 5 */
-.werden_als .strophe_titel, .schon_als .strophe_titel, .geeicht .strophe_titel {
-  margin-bottom: -0.043em;
-}
-
 .werden_als {
   grid-area: werden;
 }
 
-.kind {
-  grid-area: kind;
+.k {
+  grid-area: kind_eins;
   opacity: 0%;
-  transition: all 1s ease;
 }
 
-.kind:hover {
-  opacity: 100%;
+.i {
+  grid-area: kind_zwei;
+  opacity: 0%;
+}
+
+.n_kind {
+  grid-area: kind_drei;
+  opacity: 0%;
+}
+
+.d {
+  grid-area: kind_vier;
+  opacity: 0%;
+}
+
+.isinview .k, .isinview .i, .isinview .n_kind, .isinview .d {
+  animation-name: erscheinen_scale;
+  animation-duration: 1.3s;
+  animation-delay: 1s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
 }
 
 .schon_als {
   grid-area: schon;
 }
 
-.mann {
-  grid-area: mann;
+.m {
+  grid-area: mann_eins;
   opacity: 0%;
-  transition: all 1s ease;
+}
+.a {
+  grid-area: mann_zwei;
+  opacity: 0%;
+}
+.n_mann_eins {
+  grid-area: mann_drei;
+  opacity: 0%;
+}
+.n_mann_zwei {
+  grid-area: mann_vier;
+  opacity: 0%;
 }
 
-.mann:hover {
-  opacity: 100%;
+.isinview .m, .isinview .a, .isinview .n_mann_eins, .isinview .n_mann_zwei {
+  animation-name: erscheinen_scale;
+  animation-duration: 1.3s;
+  animation-delay: 2.3s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
 }
 
 .geeicht {
   grid-area: geeicht;
 }
 
+
 /* Bereich 6 */
+
 .wann_ist {
   grid-area: wann_ist;
   opacity: 0%;
@@ -492,11 +512,11 @@ html {
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 } */
+
 .ein_mann_eins {
   grid-area: ein_mann_eins;
   opacity: 0%;
 }
-
 .isinview .ein_mann_eins {
   animation-name: erscheinen;
   animation-duration: 1s;
@@ -521,106 +541,105 @@ html {
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-timing-function: linear;
-  animation-fill-mode: forwards;
-}
-
-/* Bereich 7 */
-.raster_bereich_sieben {
-  display: grid;
-  grid-template-columns: max-content max-content 1fr;
-  grid-template-rows: auto;
-  grid-column-gap: 5em;
-  grid-template-areas:
-    "spalte_eins spalte_zwei .";
-}
-
-.infos {
-  grid-area: spalte_eins;
-}
-
-.song {
-  grid-area: spalte_zwei;
-}
-
-p {
-  color: white;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 1.4rem;
-  line-height: 1.3em;
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-  color: white;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-iframe {
-  border: 0.05em solid white;
-}
-
-.top_button {
-  display: flex;
-  justify-content: flex-end;
-  width: 95%;
-}
-
-img.jump-top {
-  /*jump to top button*/
-  width: 4rem;
-  height: 4rem;
-}
+  animation-fill-mode: forwards;}
 
 
-.top_button {
-  animation-name: bounce_up;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-}
 
 
 /* SONSTIGES */
-.kleiner_abstand {
-  height: 2vw;
-}
-
 .abstand {
   height: 15vw;
-}
-
-.mittlerer_abstand {
-  height: 45vw;
 }
 
 .grosser_abstand {
   height: 100vw;
 }
 
+
+
 /* ANIMATIONEN */
 /* Animation SONGZEILEN */
-@keyframes bewegen_sz {
+@keyframes bewegen_sz_zwei {
   0% {
-    transform: translate(0%, 100%);
+    transform: translate(0%, 0%);
     opacity: 0%;
   }
 
   50% {
-    transform: translate(0%, 50%);
+    transform: translate(0%, -25.5%);
     opacity: 50%;
   }
 
   100% {
+    transform: translate(0%, -51%);
+    opacity: 100%;
+  }
+}
+
+@keyframes bewegen_sz_drei {
+  0% {
     transform: translate(0%, 0%);
+    opacity: 0%;
+  }
+
+  50% {
+    transform: translate(0%, -51.5%);
+    opacity: 50%;
+  }
+
+  100% {
+    transform: translate(0%, -103%);
+    opacity: 100%;
+  }
+}
+
+@keyframes bewegen_sz_vier {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 0%;
+  }
+
+  50% {
+    transform: translate(0%, -77%);
+    opacity: 50%;
+  }
+
+  100% {
+    transform: translate(0%, -154%);
+    opacity: 100%;
+  }
+}
+
+@keyframes bewegen_sz_fuenf {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 0%;
+  }
+
+  50% {
+    transform: translate(0%, -102.5%);
+    opacity: 50%;
+  }
+
+  100% {
+    transform: translate(0%, -205%);
+    opacity: 100%;
+  }
+}
+
+@keyframes bewegen_sz_sechs {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 0%;
+  }
+
+  50% {
+    transform: translate(0%, -102.5%);
+    opacity: 50%;
+  }
+
+  100% {
+    transform: translate(0%, -205%);
     opacity: 100%;
   }
 }
@@ -717,108 +736,51 @@ img.jump-top {
   }
 }
 
-/* Animation Top Button bounce_up */
-@keyframes bounce_up {
-  0% {
-    transform: translate(0%, 0%);
-  }
 
-  50% {
-    transform: translate(0%, 10%);
-  }
 
-  100% {
-    transform: translate(0%, 0%);
-  }
-}
+
 
 /* MEDIAQUERIES */
 /* BP Desktop 1024px */
-@media all and (max-width: 77em) {
-  html {
-    font-size: 14px;
-  }
-}
-
-@media all and (max-width: 67em) {
+@media all and (max-width: 64em) {
   html {
     font-size: 12px;
-  }
-}
-
-@media all and (max-width: 58em) {
-  html {
-    font-size: 10px;
   }
 
   /* BP 850px Mobile 640px */
   @media all and (max-width: 53em) {
     html {
-      font-size: 8.5px;
-    }
-
-    .progress-container {
-      height: 2px;
-    }
-
-    .progress-bar {
-      height: 2px;
-    }
-
-    .bereich_vier {
-      width: 35%;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 5vmin;
+      font-size: 5.5px;
     }
 
     .raster_bereich_vier {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, max-content);
-      grid-row-gap: 5em;
+      grid-row-gap: 2em;
       grid-template-areas:
         "aussen hart und"
         "innen ganz weich";
     }
-  }
 
-  p {
-    font-size: 16px;
-  }
-}
 
-@media all and (max-width: 41em) {
-  html {
-    font-size: 7px;
-  }
+    .raster_bereich_fuenf {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(7, auto);
+      grid-row-gap: 1em;
+      grid-template-areas:
+        "werden werden"
+        "kind_eins kind_zwei"
+        "kind_drei kind_vier"
+        "schon schon"
+        "mann_eins mann_zwei"
+        "mann_drei mann_vier"
+        "geeicht geeicht";
+    }
 
-  .raster_bereich_sieben {
-    display: grid;
-    grid-template-columns: max-content max-content;
-    grid-template-rows: auto;
-    grid-column-gap: 4em;
-    grid-template-areas:
-      "spalte_eins spalte_zwei";
+    /*
+.und {
+  justify-items: center;
+} */
   }
-}
-
-@media all and (max-width: 34em) {
-  html {
-    font-size: 6px;
-  }
-
-  p {
-    font-size: 14px;
-  }
-}
-
-@media all and (max-width: 29em) {
-  html {
-    font-size: 4px;
-  }
-
-  p {
-    font-size: 9px;
-  }
-}
