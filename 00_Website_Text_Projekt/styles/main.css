@@ -628,17 +628,17 @@ img.jump-top {
 /* Animation M Ä N N E R */
 @keyframes maenner_vergroessern {
   0% {
-    transform: scale(0%);
+    transform: scale(0);
     opacity: 0%;
   }
 
   50% {
-    transform: scale(200%);
+    transform: scale(2);
     opacity: 100%;
   }
 
   100% {
-    transform: scale(100%);
+    transform: scale(1);
     opacity: 100%;
   }
 }
@@ -679,28 +679,6 @@ img.jump-top {
   }
 }
 
-/* Animation Kind Mann erscheinen_scale */
-@keyframes erscheinen_scale {
-  0% {
-    opacity: 0%;
-    transform: scale(0%);
-  }
-
-  50% {
-    opacity: 100%;
-    transform: scale(100%);
-  }
-
-  80% {
-    opacity: 100%;
-    transform: scale(100%);
-  }
-
-  100% {
-    opacity: 0%;
-    transform: scale(100%);
-  }
-}
 
 /* Wann ist ein Mann ein Mann erscheinen */
 @keyframes erscheinen {
