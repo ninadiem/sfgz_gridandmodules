@@ -336,6 +336,7 @@ html {
 
 .aussen {
   grid-area: aussen;
+  opacity: 0%;
 }
 
 .isinview .aussen {
@@ -347,11 +348,11 @@ html {
   animation-direction: normal;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
-  opacity: 0%;
 }
 
 .hart {
   grid-area: hart;
+  opacity: 0%;
 }
 
 .isinview .hart {
@@ -363,11 +364,11 @@ html {
   animation-direction: normal;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
-  opacity: 0%;
 }
 
 .und {
   grid-area: und;
+  opacity: 0%;
 }
 
 .isinview .und {
@@ -379,11 +380,11 @@ html {
   animation-direction: normal;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
-  opacity: 0%;
 }
 
 .innen {
   grid-area: innen;
+  opacity: 0%;
 }
 
 .isinview .innen {
@@ -394,11 +395,11 @@ html {
   animation-direction: normal;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
-  opacity: 0%;
 }
 
 .ganz {
   grid-area: ganz;
+  opacity: 0%;
 }
 
 .isinview .ganz {
@@ -409,11 +410,11 @@ html {
   animation-direction: normal;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
-  opacity: 0%;
 }
 
 .weich {
   grid-area: weich;
+  opacity: 0%;
 }
 
 .isinview .weich {
@@ -424,7 +425,6 @@ html {
   animation-direction: normal;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
-  opacity: 0%;
 }
 
 /* Bereich 5 */
